@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Creeper Virus Articles</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="article.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation bar -->
+ <header class="navbar">
+    <div class="logo-container">
+         <div class="hamburger" onclick="toggleMenu()">
+          ☰
+        </div>
+        <img src="./images/logo.png" alt="Logo" class="logo">
+        <span class="username">Jairah Jave Saluta Gallegos</span>
+      </div>
+    <nav class="nav-links">
+      <a href="app.html">Home</a>
+      <a  href="discussion.html">Discussion</a>
+      <a class="home active" href="article.html">Article</a>
+      <a href="reflection.html">Reflection</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+
+  <h1>Creeper Virus Articles</h1>
+
+  <div class="slider-wrapper">
+    <button class="nav-arrow left" onclick="slideArticles('left')">&#8592;</button>
+
+    <div class="container" id="cardContainer">
+      <div class="card">
+        <img src="./images/image1.png" alt="Creeper Virus">
+        <div class="card-content">
+          <div class="card-title">What is the Creeper Virus?</div>
+          <button onclick="openArticle('https://en.wikipedia.org/wiki/Creeper_program')">Read Article</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./images/image2.png" alt="Computer Virus">
+        <div class="card-content">
+          <div class="card-title">History of Computer Viruses</div>
+          <button onclick="openArticle('https://pandorafms.com/blog/creeper-and-reaper/')">Read Article</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./images/image3.png" alt="ARPANET">
+        <div class="card-content">
+          <div class="card-title">Creeper Spread via ARPANET</div>
+          <button onclick="openArticle('https://www.exabeam.com/blog/infosec-trends/creeper-the-worlds-first-computer-virus/')">Read Article</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./images/image1.png" alt="Reaper Antivirus">
+        <div class="card-content">
+          <div class="card-title">The First Antivirus: Reaper</div>
+          <button onclick="openArticle('https://www.techopedia.com/definition/4068/creeper-virus')">Read Article</button>
+        </div>
+      </div>
+
+      <div class="card">
+    <img src="./images/image2.png" alt="Creeper Virus Variants">
+    <div class="card-content">
+      <div class="card-title">Variants of the Creeper Virus</div>
+      <button onclick="openArticle('https://www.sciencedirect.com/topics/computer-science/computer-virus')">Read Article</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="./images/image3.png" alt="Impact of Creeper Virus">
+    <div class="card-content">
+      <div class="card-title">Impact of Creeper on Security</div>
+      <button onclick="openArticle('https://www.icta.lk/media/blog/the-creeper-program#:~:text=Evolution%20and%20Impact&text=However%2C%20Creeper%20also%20sparked%20innovation,cybersecurity%20experts%20and%20malicious%20actors.')">Read Article</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="./images/image1.png" alt="Evolution of Malware">
+    <div class="card-content">
+      <div class="card-title">Evolution of Malware Since Creeper</div>
+      <button onclick="openArticle('https://www.secureops.com/blog/malware-evolution-2/#:~:text=Wabbit%2C%20Elk%20Cloner%2C%20Brain%2C,and%20cause%20it%20to%20crash.')">Read Article</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="./images/image2.png" alt="Computer Virus Prevention">
+    <div class="card-content">
+      <div class="card-title">Preventing Computer Virus Attacks</div>
+      <button onclick="openArticle('https://www.avast.com/c-computer-virus')">Read Article</button>
+    </div>
+  </div>
+</div>
+
+      <!-- Add more cards here if needed -->
+    </div>
+
+    <button class="nav-arrow right" onclick="slideArticles('right')">&#8594;</button>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="articleModal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal()">Close</button>
+      <iframe id="articleFrame" src=""></iframe>
+    </div>
+  </div>
+
+  <script>
+  function openArticle(url) {
+    document.getElementById('articleFrame').src = url;
+    document.getElementById('articleModal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('articleModal').style.display = 'none';
+    document.getElementById('articleFrame').src = '';
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById('articleModal');
+    if (event.target === modal) {
+      closeModal();
+    }
+  }
+
+  const container = document.getElementById('cardContainer');
+  const cardWidth = 370; // Match this to your card width (incl. margin/gap if needed)
+
+  function slideArticles(direction) {
+    const scrollAmount = cardWidth;
+
+    if (direction === 'right') {
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    } else if (direction === 'left') {
+      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    }
+  }
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navbar = document.querySelector(".navbar");
+
+    hamburger.addEventListener("click", function () {
+        navbar.classList.toggle("active");
+    });
+});
+</script>
+
+
+
+</body>
+</html>

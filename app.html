@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Creeper Virus Introduction</title>
+  <link rel="stylesheet" href="app.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+    <audio id="warning-audio" src="warning.mp3" preload="auto"></audio>
+
+
+    <!-- Navigation bar -->
+    <header class="navbar">
+
+      <!-- Left: Logo and name -->
+      <div class="logo-container">
+         <div class="hamburger" onclick="toggleMenu()">
+          ☰
+        </div>
+        <img src="./images/logo.png" alt="Logo" class="logo">
+        <span class="username">Jairah Jave Saluta Gallegos</span>
+      </div>
+  
+      <!-- Right: Navigation links -->
+      <nav class="nav-links">
+      <a class="home active" href="app.html">Home</a>
+      <a href="discussion.html">Discussion</a>
+      <a href="article.html">Article</a>
+      <a href="reflection.html">Reflection</a>
+      <a href="about.html">About</a>
+    </nav>
+    </header>
+  
+    <!-- Main content -->
+    <main class="content">
+      <h1>Welcome to the World of Creeper</h1>
+      <div class="image-gallery">
+  <div class="glitch-container">
+    <img src="./images/image1.png" alt="Creeper Virus Screenshot">
+    <div class="warning-sign">⚠️ WARNING! <br>VIRUS DETECTED!</div>
+  </div>
+  <div class="glitch-container">
+    <img src="./images/image3.png" alt="TENEX Creeper Demo">
+    <div class="warning-sign">⚠️ WARNING! <br>VIRUS DETECTED!</div>
+  </div>
+  <div class="glitch-container">
+    <img src="./images/image2.png" alt="Creeper Message Display">
+   <div class="warning-sign">⚠️ WARNING! <br>VIRUS DETECTED!</div>
+  </div>
+</div>
+
+
+      </div>
+      
+    <button onclick="startWithLoading()">START</button>
+    </main>
+
+   <!-- Add this loader overlay just inside <body> -->
+<div id="loader-overlay">
+  <div class="terminal-box">
+    <div class="glitchy-text">Deploying Creeper Virus...</div>
+    <div class="spinner"></div>
+    <p class="status-text">Injecting payload into system...</p>
+  </div>
+</div>
+
+
+
+<script>
+  function startWithLoading() {
+    const loader = document.getElementById('loader-overlay');
+    loader.style.display = 'flex';
+    setTimeout(() => {
+      // Redirect with a query param to show welcome message
+      window.location.href = 'discussion.html?installed=true';
+    }, 3000); // 3 seconds loading effect
+  }
+</script>
+
+<script>
+  const warningSound = document.getElementById('warning-audio');
+
+  // Attach event listeners to all .glitch-container elements
+  document.querySelectorAll('.glitch-container').forEach(container => {
+    container.addEventListener('mouseenter', () => {
+      warningSound.currentTime = 0; // rewind to start
+      warningSound.play();
+    });
+  });
+
+  function startWithLoading() {
+    const loader = document.getElementById('loader-overlay');
+    loader.style.display = 'flex';
+    setTimeout(() => {
+      window.location.href = 'discussion.html?installed=true';
+    }, 3000);
+  }
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navbar = document.querySelector(".navbar");
+
+    hamburger.addEventListener("click", function () {
+        navbar.classList.toggle("active");
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

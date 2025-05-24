@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Creeper Virus Discussion</title>
+  <link rel="stylesheet" href="discussion.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+  #welcome-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000000d9;
+    color: #39ff14;
+    text-shadow: 0 0 5px #2fd612, 0 0 10px #ccff00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: 'Courier New', monospace;
+    z-index: 9999;
+    animation: fadeOut 5s ease forwards;
+  }
+  
+
+  @keyframes fadeOut {
+    0%, 80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+</style>
+</head>
+
+<body>
+
+  <!-- Navigation bar -->
+  <header class="navbar">
+    <div class="logo-container">
+         <div class="hamburger" onclick="toggleMenu()">
+          ☰
+        </div>
+        <img src="./images/logo.png" alt="Logo" class="logo">
+        <span class="username">Jairah Jave Saluta Gallegos</span>
+      </div>
+    <nav class="nav-links">
+      <a href="app.html">Home</a>
+      <a class="home active" href="discussion.html">Discussion</a>
+      <a href="article.html">Article</a>
+      <a href="reflection.html">Reflection</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="content">
+
+    <!-- Section 1: History -->
+    <section id="history" class="section">
+      <div class="flex-container">
+        <div class="text">
+          <h2>History of the Creeper Virus</h2>
+          <p>The Creeper virus was developed in 1971 by Bob Thomas, a computer scientist at BBN Technologies. It is considered the <strong>first computer virus</strong> in history. Unlike modern viruses, Creeper wasn’t created to steal information or destroy data. Instead, it was an experiment meant to explore the idea that a program could move between computers on a network.</p>
+            <p>Once Creeper infected a system, it didn’t cause damage, it simply displayed a fun and mysterious message on the screen: <strong>"I'M THE CREEPER, CATCH ME IF YOU CAN!"</strong> This message let users know that their computer had been “visited” by the Creeper.</p>
+
+          <div class="buttons">
+            <button id="backBtn" onclick="previousContent()">Back</button>
+            <button id="nextBtn" onclick="nextContent()">Next</button>
+          </div>
+        </div>
+        <div class="image">
+          <img src="./images/image1.png" alt="Creeper Virus History" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: How It Works -->
+    <section id="how-it-works" class="section">
+      <div class="flex-container">
+        <div class="text">
+          <h2>How the Creeper Virus Works</h2>
+          <p>Creeper was the first known <strong>self-replicating computer program</strong>, which means it could make copies of itself and move to other computers. It did this by using <strong>ARPANET</strong>, the early version of the internet. Once installed on a computer, Creeper would try to transfer itself to another machine and remove itself from the original one, making it different from later viruses that try to stay hidden and spread widely.</p>
+          <p>Instead of damaging files or stealing personal information, Creeper simply showed that a virus could <strong>move and operate across a connected network</strong>, which was a new and fascinating idea at the time.</p>
+
+          <div class="buttons">
+            <button id="backBtn2" onclick="previousContent()">Back</button>
+            <button id="nextBtn2" onclick="nextContent()">Next</button>
+          </div>
+        </div>
+        <div class="image">
+          <img src="./images/image3.png" alt="How Creeper Virus Works" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: The Aftermath -->
+    <section id="aftermath" class="section">
+      <div class="flex-container">
+        <div class="text">
+          <h2>The Aftermath and Legacy</h2>
+          <p>Even though the Creeper virus didn’t harm any systems, it had a big impact on the world of technology. It showed that computer networks were <strong>vulnerable to code that could travel on its own</strong>, which made people think more seriously about cybersecurity.</p>
+          <p>In response to Creeper, another program was created called <strong>"The Reaper"</strong> which is known as the <strong>first antivirus software</strong>. Reaper’s job was to find and delete Creeper wherever it appeared. This was the beginning of a long history of <strong>viruses and antivirus programs</strong> constantly evolving to outsmart each other.</p>
+          <p>Creeper's legacy lives on as the ancestor of modern malware and the first step toward today’s complex cybersecurity challenges.</p>
+
+          <div class="buttons">
+            <button id="backBtn3" onclick="previousContent()">Back</button>
+            <button id="nextBtn3" onclick="nextContent()">Next</button>
+          </div>
+        </div>
+        <div class="image">
+          <img src="./images/image2.png" alt="Creeper Virus Aftermath" />
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+ <script>
+  let currentSlide = 0;
+    const slides = document.querySelectorAll('.section');
+    const allNextBtns = document.querySelectorAll('[id^="nextBtn"]');
+    const allBackBtns = document.querySelectorAll('[id^="backBtn"]');
+
+    function updateButtons() {
+      allNextBtns.forEach(btn => btn.style.display = 'none');
+      allBackBtns.forEach(btn => btn.style.display = 'none');
+
+      if (currentSlide > 0) {
+        const backBtn = slides[currentSlide].querySelector('[id^="backBtn"]');
+        if (backBtn) backBtn.style.display = 'inline-block';
+      }
+
+      if (currentSlide < slides.length - 1) {
+        const nextBtn = slides[currentSlide].querySelector('[id^="nextBtn"]');
+        if (nextBtn) nextBtn.style.display = 'inline-block';
+      }
+    }
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
+      });
+      updateButtons();
+    }
+
+    function nextContent() {
+      if (currentSlide < slides.length - 1) {
+        currentSlide++;
+        showSlide(currentSlide);
+      }
+    }
+
+    function previousContent() {
+      if (currentSlide > 0) {
+        currentSlide--;
+        showSlide(currentSlide);
+      }
+    }
+
+    window.onload = () => {
+      showSlide(currentSlide);
+    };
+
+   window.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    console.log("Installed parameter:", urlParams.get('installed')); // DEBUG LOG
+    if (urlParams.get('installed') === 'true') {
+      const welcomeMessage = document.createElement('div');
+      welcomeMessage.id = 'welcome-message';
+      welcomeMessage.textContent = 'Creeper Virus Installed Successfully!';
+      document.body.appendChild(welcomeMessage);
+
+      setTimeout(() => {
+        welcomeMessage.remove();
+      }, 5000);
+    }
+  });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navbar = document.querySelector(".navbar");
+
+    hamburger.addEventListener("click", function () {
+        navbar.classList.toggle("active");
+    });
+});
+</script>
+
+
+
+</body>
+</html>

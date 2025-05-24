@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflection on Creeper Virus</title>
+    <link rel="stylesheet" href="reflection.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation bar -->
+  <header class="navbar">
+    <div class="logo-container">
+         <div class="hamburger" onclick="toggleMenu()">
+          ☰
+        </div>
+        <img src="./images/logo.png" alt="Logo" class="logo">
+        <span class="username">Jairah Jave Saluta Gallegos</span>
+      </div>
+    <nav class="nav-links">
+      <a href="app.html">Home</a>
+      <a href="discussion.html">Discussion</a>
+      <a href="article.html">Article</a>
+      <a class="home active" href="reflection.html">Reflection</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+    <!-- Reflection Content -->
+    <div class="reflection">
+        <h1>Reflection on Creeper Virus</h1>
+
+        <div class="reflection-section">
+            <img src="./images/image1.png" alt="Creeper Virus" class="section-image">
+            <div class="text">
+                <h2>The Creeper Virus</h2>
+                <p>The Creeper virus, one of the first computer viruses ever created, was designed in the early 1970s. This virus was not malicious in the way modern viruses are, but it had a significant impact on how we understand computer security today. The Creeper virus would move from one system to another, displaying the message, "I'm the Creeper, catch me if you can!"</p>
+                <p>What makes the Creeper virus significant isn't its impact at the time, it didn't cause any major harm but rather its place in the history of computing. It was one of the first viruses to demonstrate the concept of self-replication and network propagation, both of which have become central themes in the study of modern cybersecurity.</p>
+            </div>
+        </div>
+
+        <div class="reflection-section">
+            <div class="text">
+                <h2>The Impact of Creeper Virus</h2>
+                <p>While the Creeper virus was more of an experiment than an attack, its creation set the stage for the development of the first antivirus program, known as the "Reaper" program. Reaper was designed to track down and delete instances of the Creeper virus, marking the beginning of the antivirus industry.</p>
+                <p>The Creeper virus's historical significance lies not only in its self-replicating behavior but also in the evolution of cybersecurity. It forced researchers and security experts to think about how software can propagate through networks and how to protect systems from malicious code, which later led to the development of modern cybersecurity measures.</p>
+            </div>
+            <img src="./images/image3.png" alt="Creeper Virus History" class="section-image">
+        </div>
+
+        <div class="reflection-section">
+            <img src="./images/image2.png" alt="Creeper Virus Analysis" class="section-image">
+            <div class="text">
+                <h2>Analyzing the Creeper Virus Today</h2>
+                <p>In today's world, computer viruses have become a significant threat, with self-replicating malware being a major concern for organizations and individuals alike. Though the Creeper virus was relatively harmless, it highlighted the potential for viruses to spread and cause damage across computer networks.</p>
+                <p>Looking back at the Creeper virus, it's clear how far we've come in terms of understanding malware and building security systems to prevent its spread. It is a reminder of how the field of cybersecurity has evolved and how it continues to change as new threats emerge.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navbar = document.querySelector(".navbar");
+
+    hamburger.addEventListener("click", function () {
+        navbar.classList.toggle("active");
+    });
+});
+</script>
+
+    <!-- Footer -->
+    <!-- <footer>
+        <p>&copy; 2025 Your Name | Reflection on Creeper Virus</p>
+    </footer> -->
+
+</body>
+</html>
