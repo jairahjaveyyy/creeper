@@ -317,6 +317,17 @@ a{
         display: flex;
     }
 
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+      display: none; /* Hidden by default for mobile */
+    }
+    
+    .nav-links.show {
+      display: flex;
+    }
+
+
     .logo {
         padding: 5px;
     }
