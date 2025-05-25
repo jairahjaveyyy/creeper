@@ -372,23 +372,12 @@ button:hover {
         padding: 5px;
     }
 
-    .hamburger {
-        display: block;
-        position: absolute;
-       
-        right: 20px;
-    }
-
     .navbar.active .nav-links {
         display: flex;
     }
 
     .logo {
         padding: 5px;
-    }
-
-    .glitch-container img {
-        max-width: 100%;
     }
 
     h1 {
@@ -403,22 +392,10 @@ button:hover {
     margin-top: 100px;
 }
 
-    .glitch-container img {
-    width: 300px;
-    padding: 20px;
-}
-
     .username {
     font-size: 18px;
 }
 
-    .content {
-    max-width: 500px;
-}
-
-    .image-gallery {
-   width: 500px;
-}
 
 
 }
