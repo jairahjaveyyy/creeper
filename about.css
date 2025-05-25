@@ -48,7 +48,7 @@ body {
 }
 
 .username {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: #39ff14;
     font-size: 24px;
@@ -66,9 +66,10 @@ body {
     text-decoration: none;
     margin-left: 20px;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 18px;
     transition: color 0.3s;
 }
+
 
 .nav-links a:hover {
     color: #ccff00;
@@ -88,7 +89,7 @@ body {
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    margin-top: 10px;
+    margin-top: 30px;
     gap: 50px;
   }
   
@@ -105,8 +106,8 @@ body {
   }
   
   .profile-img {
-    width: 500px;
-    height: 500px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 0 8px #39ff14;
@@ -114,6 +115,10 @@ body {
 
   .profile-img {
   animation: pulseGlow 3s ease-in-out infinite, float 5s ease-in-out infinite;
+}
+
+.about-text{
+    font-size: 18px;
 }
 
 @keyframes float {
