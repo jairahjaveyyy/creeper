@@ -124,7 +124,7 @@ h1 {
   overflow: hidden;
   box-shadow: 0 0 10px #39ff14;
   transition: transform 0.3s ease;
-  width: 150px;
+  width: 80px;
   flex-shrink: 0;
 }
 
