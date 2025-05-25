@@ -231,7 +231,6 @@ a{
 }
 
 
-
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -271,7 +270,7 @@ a{
     p {
         font-size: 20px;
     }
-     
+    
     .about-container {
         flex-direction: column;
         align-items: center;
