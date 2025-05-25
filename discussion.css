@@ -277,6 +277,10 @@ button:hover {
     margin: 10px;
 }
 
+    button {
+    width: 50px;
+}
+
 
   
 
