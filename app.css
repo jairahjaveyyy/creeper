@@ -341,7 +341,7 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-    .navbar {
+   .navbar {
         flex-direction: column;
         align-items: flex-start;
         padding: 15px;
@@ -356,6 +356,20 @@ button:hover {
     .nav-links a {
         margin: 10px 0;
         font-size: 18px;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+    }
+
+    .navbar.active .nav-links {
+        display: flex;
+    }
+
+    .logo {
+        padding: 5px;
     }
 
     .hamburger {
