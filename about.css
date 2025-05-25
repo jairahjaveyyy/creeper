@@ -82,36 +82,44 @@ body {
 
 /* About Section */
 .about-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    margin-top: 50px;
-    gap: 50px;
-  }
-  
-  .about-card {
-    /* border: 1px solid #39ff14;
-    box-shadow: 0 0 10px #39ff14; */
-    border-radius: 10px;
-    max-width: 1000px;
-    width: 100%;
-    height: 500px;
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    margin-top: 50px;
-  }
-  
-  .profile-img {
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 0 8px #39ff14;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  gap: 50px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
 
+.about-card {
+  border-radius: 10px;
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.6); /* translucent background */
+  padding: 30px;
+  box-shadow: 0 0 20px #39ff14;
+}
+
+.profile-img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #39ff14;
+  animation: pulseGlow 3s ease-in-out infinite, float 5s ease-in-out infinite;
+}
+
+
+.about-text {
+  color: white;
+  flex: 1;
+}
   .profile-img {
   animation: pulseGlow 3s ease-in-out infinite, float 5s ease-in-out infinite;
 }
@@ -291,7 +299,7 @@ a{
 }
 
 @media (max-width: 768px) {
-   .navbar {
+    .navbar {
         flex-direction: column;
         align-items: flex-start;
         padding: 15px;
@@ -318,36 +326,43 @@ a{
         display: flex;
     }
 
-    .nav-links {
-      flex-direction: column;
-      width: 100%;
-      display: none; /* Hidden by default for mobile */
-    }
-    
-    .nav-links.show {
-      display: flex;
-    }
-
-
     .logo {
         padding: 5px;
     }
 
-    .username {
-    font-size: 18px;
-}
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 20px;
+    }
 
     .about-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: justify;
-        margin-top: 100px;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .about-text{
-    background-color: #1a1a1a;
-    padding: 20px;
-    margin-bottom: 10px;
+  .about-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
+
+  .profile-img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .about-text {
+    padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark background for readability */
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+  }
+     
+
+  
 
 }
