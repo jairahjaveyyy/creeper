@@ -48,10 +48,9 @@ body {
 }
 
 .username {
-    font-size: 16px;
     font-weight: bold;
     color: #39ff14;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 /* Navigation links */
@@ -391,12 +390,19 @@ button:hover {
 }
 
     .glitch-container img {
-    width: 450px;
+    width: 400px;
     max-width: 400px;
     border: 2px solid #39ff14;
     border-radius: 8px;
     box-shadow: 0 0 10px #39ff14;
     transition: transform 0.3s ease;
+    padding: 20px;
+}
+
+    .username {
+    font-weight: bold;
+    color: #39ff14;
+    font-size: 18px;
 }
 
 }
