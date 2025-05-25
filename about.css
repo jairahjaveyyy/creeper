@@ -89,7 +89,7 @@ body {
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    margin-top: 30px;
+    margin-top: 10px;
     gap: 50px;
   }
   
@@ -103,31 +103,19 @@ body {
     display: flex;
     gap: 30px;
     align-items: flex-start;
-    font-size: 16px;
   }
   
-.profile-img {
-  width: 500px;
-  height: 500px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 0 8px #39ff14;
-  animation: pulseGlow 3s ease-in-out infinite;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-  .about-text {
-  flex: 1;
-  font-size: 18px;
-  display: flex;
-  flex-direction: column;
-}
-
+  .profile-img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #39ff14;
+  }
 
   .profile-img {
   animation: pulseGlow 3s ease-in-out infinite, float 5s ease-in-out infinite;
 }
-
-
 
 @keyframes float {
   0%, 100% {
@@ -154,8 +142,6 @@ body {
   }
 }
 
-
-  
   .about-text h1 {
     color: #39ff14;
     margin-bottom: 10px;
