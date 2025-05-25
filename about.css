@@ -106,22 +106,28 @@ body {
     font-size: 16px;
   }
   
-  .profile-img {
-    margin-top: 90px;
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 0 8px #39ff14;
-  }
+.profile-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #39ff14;
+  animation: pulseGlow 3s ease-in-out infinite;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+  .about-text {
+  flex: 1;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
 
   .profile-img {
   animation: pulseGlow 3s ease-in-out infinite, float 5s ease-in-out infinite;
 }
 
-.about-text < p {
-    font-size: 16px;
-}
+
 
 @keyframes float {
   0%, 100% {
