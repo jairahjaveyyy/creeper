@@ -6,8 +6,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: relative;
-    overflow: hidden;
     background-color: #0d0d0d;
      height: auto;
     min-height: 100vh;
