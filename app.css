@@ -405,5 +405,9 @@ button:hover {
     font-size: 18px;
 }
 
+    .content {
+    max-width: 800px;
+}
+
 }
 
