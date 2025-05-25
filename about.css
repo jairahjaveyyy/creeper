@@ -106,8 +106,9 @@ body {
   }
   
   .profile-img {
-    width: 350px;
-    height: 350px;
+     margin-top: 30px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 0 8px #39ff14;
@@ -117,7 +118,7 @@ body {
   animation: pulseGlow 3s ease-in-out infinite, float 5s ease-in-out infinite;
 }
 
-.about-text{
+p {
     font-size: 18px;
 }
 
