@@ -321,34 +321,6 @@ a{
         padding: 5px;
     }
 
-    .hamburger {
-        display: block;
-        position: absolute;
-       
-        right: 20px;
-    }
-
-    .navbar.active .nav-links {
-        display: flex;
-    }
-
-    .logo {
-        padding: 5px;
-    }
-
-    .glitch-container img {
-        max-width: 100%;
-    }
-
-    h1 {
-        font-size: 28px;
-    }
-
-    p {
-        font-size: 12px;
-    }
-
-  
     .username {
     font-size: 18px;
 }
