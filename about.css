@@ -103,6 +103,7 @@ body {
     display: flex;
     gap: 30px;
     align-items: flex-start;
+      margin-top: 50px;
   }
   
   .profile-img {
