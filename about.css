@@ -154,23 +154,6 @@ body {
   }
 }
 
-.profile-img {
-  width: 500px;
-  height: 500px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 0 8px #39ff14;
-  animation: pulseGlow 3s ease-in-out infinite;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-  
-  .about-text {
-  flex: 1;
-  font-size: 23px;
-  display: flex;
-  flex-direction: column;
-}
 
   
   .about-text h1 {
