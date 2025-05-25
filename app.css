@@ -372,13 +372,6 @@ button:hover {
         padding: 5px;
     }
 
-    .navbar.active .nav-links {
-        display: flex;
-    }
-
-    .logo {
-        padding: 5px;
-    }
 
     h1 {
         font-size: 28px;
