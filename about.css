@@ -19,7 +19,7 @@ body {
 }
 
 
-/* Navbar */
+/* Navbar styles */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -48,9 +48,9 @@ body {
 }
 
 .username {
+    font-size: 20px;
     font-weight: bold;
     color: #39ff14;
-    font-size: 20px;
 }
 
 /* Navigation links */
@@ -68,6 +68,7 @@ body {
     font-size: 18px;
     transition: color 0.3s;
 }
+
 
 .nav-links a:hover {
     color: #ccff00;
