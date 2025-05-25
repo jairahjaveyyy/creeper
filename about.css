@@ -107,8 +107,8 @@ body {
   }
   
 .profile-img {
-  width: 250px;
-  height: 250px;
+  width: 350px;
+  height: 350px;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 0 8px #39ff14;
