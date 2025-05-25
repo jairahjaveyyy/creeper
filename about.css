@@ -105,13 +105,6 @@ body {
     align-items: flex-start;
   }
   
-  .profile-img {
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 0 8px #39ff14;
-  }
 
   .profile-img {
   animation: pulseGlow 3s ease-in-out infinite, float 5s ease-in-out infinite;
@@ -148,7 +141,6 @@ body {
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 0 8px #39ff14;
-    margin-top: 30px;
   }
 
   .about-text h1 {
